@@ -22,9 +22,9 @@
         <!-- Left Column: Position Cards -->
         <div class="left-column">
             <h3 class="centered-text">Select Position</h3>
-            <div class="card" data-type="position" data-value="controlled" onclick="selectValue(this)">Controlled</div>
-            <div class="card" data-type="position" data-value="risky" onclick="selectValue(this)">Risky</div>
-            <div class="card" data-type="position" data-value="desperate" onclick="selectValue(this)">Desperate</div>
+            <div class="card" data-type="position" data-value="controlled" data-tooltip="minor harm, risky position, reduced effect, minor complication" onclick="selectValue(this)">Controlled</div>
+            <div class="card" data-type="position" data-value="risky" data-tooltip="moderate harm, reduced effect, desperate position" onclick="selectValue(this)">Risky</div>
+            <div class="card" data-type="position" data-value="desperate" data-tooltip="severe harm, serious complication" onclick="selectValue(this)">Desperate</div>
         </div>
     
         <!-- Right Column: Action Cards -->
@@ -33,34 +33,35 @@
             <!-- Insight -->
             <div class="action-group">
                 <h3 class="centered-text">Insight</h3>
-                <div class="card" data-type="action" data-value="hunt" onclick="selectValue(this)">Hunt</div>
-                <div class="card" data-type="action" data-value="study" onclick="selectValue(this)">Study</div>
-                <div class="card" data-type="action" data-value="survey" onclick="selectValue(this)">Survey</div>
-                <div class="card" data-type="action" data-value="tinker" onclick="selectValue(this)">Tinker</div>
+                <div class="card" data-type="action" data-value="hunt" data-tooltip="to locate, carefully track, or ambush a target" onclick="selectValue(this)">Hunt</div>
+                <div class="card" data-type="action" data-value="study" data-tooltip="to scrutinize details and interpret evidence" onclick="selectValue(this)">Study</div>
+                <div class="card" data-type="action" data-value="survey" data-tooltip="to observe situations and anticipate results" onclick="selectValue(this)">Survey</div>
+                <div class="card" data-type="action" data-value="tinker" data-tooltip="to fiddle with devices and mechanisms" onclick="selectValue(this)">Tinker</div>
             </div>
     
             <!-- Prowess -->
             <div class="action-group">
                 <h3 class="centered-text">Prowess</h3>
-                <div class="card" data-type="action" data-value="finesse" onclick="selectValue(this)">Finesse</div>
-                <div class="card" data-type="action" data-value="prowl" onclick="selectValue(this)">Prowl</div>
-                <div class="card" data-type="action" data-value="skirmish" onclick="selectValue(this)">Skirmish</div>
-                <div class="card" data-type="action" data-value="wreck" onclick="selectValue(this)">Wreck</div>
+                <div class="card" data-type="action" data-value="finesse" data-tooltip="to manipulate objects or subtly misdirect" onclick="selectValue(this)">Finesse</div>
+                <div class="card" data-type="action" data-value="prowl" data-tooltip="to traverse areas skillfully and quiet" onclick="selectValue(this)">Prowl</div>
+                <div class="card" data-type="action" data-value="skirmish" data-tooltip="to attack in close combat and prevent escape" onclick="selectValue(this)">Skirmish</div>
+                <div class="card" data-type="action" data-value="wreck" data-tooltip="to unleash savage force or enact sabotage" onclick="selectValue(this)">Wreck</div>
             </div>
     
             <!-- Resolve -->
             <div class="action-group">
                 <h3 class="centered-text">Resolve</h3>
-                <div class="card" data-type="action" data-value="attune" onclick="selectValue(this)">Attune</div>
-                <div class="card" data-type="action" data-value="command" onclick="selectValue(this)">Command</div>
-                <div class="card" data-type="action" data-value="consort" onclick="selectValue(this)">Consort</div>
-                <div class="card" data-type="action" data-value="sway" onclick="selectValue(this)">Sway</div>
+                <div class="card" data-type="action" data-value="attune" data-tooltip="to view the ghost field or use arcane power" onclick="selectValue(this)">Attune</div>
+                <div class="card" data-type="action" data-value="command" data-tooltip="to compel swift obedience and intimidate" onclick="selectValue(this)">Command</div>
+                <div class="card" data-type="action" data-value="consort" data-tooltip="to socialize and gain information or allies" onclick="selectValue(this)">Consort</div>
+                <div class="card" data-type="action" data-value="sway" data-tooltip="to manipulate with guile or charme" onclick="selectValue(this)">Sway</div>
             </div>
             
         </div>
     
     </div>
     
+
     <!-- Generate Button and Output -->
     <button onclick="generateDanger()">Generate Danger</button>
     <p id="dangerOutput"></p>

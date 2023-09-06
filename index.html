@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap">
+    
+    <script src="dangers.json" defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <h1>Scoundrel Danger Generator</h1>
+                    
+    <div class="card-container">
+
+        <!-- Left Column: Position Cards -->
+        <div class="left-column">
+            <h3 class="centered-text">Select Position</h3>
+            <div class="card" data-type="position" data-value="controlled" onclick="selectValue(this)">Controlled</div>
+            <div class="card" data-type="position" data-value="risky" onclick="selectValue(this)">Risky</div>
+            <div class="card" data-type="position" data-value="desperate" onclick="selectValue(this)">Desperate</div>
+        </div>
+    
+        <!-- Right Column: Action Cards -->
+        <div class="right-column">
+    
+            <!-- Insight -->
+            <div class="action-group">
+                <h3 class="centered-text">Insight</h3>
+                <div class="card" data-type="action" data-value="hunt" onclick="selectValue(this)">Hunt</div>
+                <div class="card" data-type="action" data-value="study" onclick="selectValue(this)">Study</div>
+                <div class="card" data-type="action" data-value="survey" onclick="selectValue(this)">Survey</div>
+                <div class="card" data-type="action" data-value="tinker" onclick="selectValue(this)">Tinker</div>
+            </div>
+    
+            <!-- Prowess -->
+            <div class="action-group">
+                <h3 class="centered-text">Prowess</h3>
+                <div class="card" data-type="action" data-value="finesse" onclick="selectValue(this)">Finesse</div>
+                <div class="card" data-type="action" data-value="prowl" onclick="selectValue(this)">Prowl</div>
+                <div class="card" data-type="action" data-value="skirmish" onclick="selectValue(this)">Skirmish</div>
+                <div class="card" data-type="action" data-value="wreck" onclick="selectValue(this)">Wreck</div>
+            </div>
+    
+            <!-- Resolve -->
+            <div class="action-group">
+                <h3 class="centered-text">Resolve</h3>
+                <div class="card" data-type="action" data-value="attune" onclick="selectValue(this)">Attune</div>
+                <div class="card" data-type="action" data-value="command" onclick="selectValue(this)">Command</div>
+                <div class="card" data-type="action" data-value="consort" onclick="selectValue(this)">Consort</div>
+                <div class="card" data-type="action" data-value="sway" onclick="selectValue(this)">Sway</div>
+            </div>
+            
+        </div>
+    
+    </div>
+    
+    <!-- Generate Button and Output -->
+    <button onclick="generateDanger()">Generate Danger</button>
+    <p id="dangerOutput"></p>
+    
+    
+
+</body>
+
+</html>

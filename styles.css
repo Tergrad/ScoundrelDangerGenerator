@@ -1,0 +1,159 @@
+/* Styling */
+
+
+body {
+    background-color:#22201B;
+    color: #625949;
+    font-family: 'Old Standard TT', serif;
+    padding: 2%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Bristol Maver', serif;
+    white-space: nowrap;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px #22201B;
+    text-align: center;
+}
+
+
+button {
+    display: block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border: none;
+    background-color: #785f29;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'Old Standard TT', serif;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+
+.centered-text {
+    text-align: center;
+}
+
+
+.card-container {
+    display: flex;
+    gap: 15%; /* Adds space between the main columns */
+}
+
+.left-column {
+    flex-basis: 10%; /* Occupy 10% of the parent's width */
+}
+
+.right-column {
+    display: flex;
+    gap: 20px; /* Adds space between the action groups */
+    flex: 1; /* Occupy the remaining space */
+}
+
+.card-group {
+    flex: 1; /* Distributes space equally among action groups */
+    display: flex;
+    flex-direction: column;
+}
+
+.position-group {
+    flex-basis: 100%; /* Takes full width */
+    margin-bottom: 20px;
+}
+
+.action-group {
+    flex-basis: calc(33.3333% - 20px); /* Distributes space equally between action groups, minus gaps */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.card {
+    padding: 10px 20px;
+    width: 60%;
+    border: 2px solid #625949;
+    display: inline-block;
+    margin: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #1a1a1a;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    background-color: #2c2b29;
+}
+
+.card.selected {
+    background-color: #ccccccb7;
+    color:#1a1a1a
+}
+
+.danger-heading {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.danger-description {
+    margin-top: 5px;
+}
+
+#dangerOutput {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; /* This makes sure that the cards align to the start */
+    gap: 10px; 
+    width: 100%; /* Ensures the container spans the full width */
+    max-width: calc((33.33% - 40px) * 3 + 60px); 
+    margin: 0 auto; 
+}
+
+/* Adjustments for mobile screens */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        flex-basis: 100%;
+    }
+}
+
+
+.generated-card {
+    border: 2px solid #625949;
+    color: #99845f;
+    transition: opacity 0.5s ease-out;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px; /* Simplified margin */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    background-color: #1a1a1a;
+    width: calc(33.33% - 40px); /* Adjusted for the total margins */
+}
+
+.danger-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
